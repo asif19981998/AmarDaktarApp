@@ -3,23 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31112.23
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AmarDaktarApp", "AmarDaktarApp\AmarDaktarApp.csproj", "{D73628AF-C7DE-4865-8E3E-031883BC2821}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AmarDaktarApp", "AmarDaktarApp\AmarDaktarApp.csproj", "{D73628AF-C7DE-4865-8E3E-031883BC2821}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AmarDaktar.Repositories", "AmarDaktar.Repositories\AmarDaktar.Repositories.csproj", "{002DDFE1-D447-4AB7-BD14-1034915457B1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AmarDaktar.Repositories", "AmarDaktar.Repositories\AmarDaktar.Repositories.csproj", "{002DDFE1-D447-4AB7-BD14-1034915457B1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AmarDaktar.Repositories.Abastractions", "AmarDaktar.Repositories.Abastractions\AmarDaktar.Repositories.Abastractions.csproj", "{74D41727-BA07-4036-8B8D-08A134A0501B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AmarDaktar.Repositories.Abastractions", "AmarDaktar.Repositories.Abastractions\AmarDaktar.Repositories.Abastractions.csproj", "{74D41727-BA07-4036-8B8D-08A134A0501B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AmarDaktar.BLL", "AmarDaktar.BLL\AmarDaktar.BLL.csproj", "{5232FC81-1958-441B-A2F2-73665DCBBFBD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AmarDaktar.BLL", "AmarDaktar.BLL\AmarDaktar.BLL.csproj", "{5232FC81-1958-441B-A2F2-73665DCBBFBD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AmarDaktar.BLL.Repositories", "AmarDaktar.BLL.Repositories\AmarDaktar.BLL.Repositories.csproj", "{01063591-236B-45EC-8B6A-B3233C96C14C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AmarDaktar.BLL.Repositories", "AmarDaktar.BLL.Repositories\AmarDaktar.BLL.Repositories.csproj", "{01063591-236B-45EC-8B6A-B3233C96C14C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AmarDaktar.DataBaseContext", "AmarDaktar.DataBaseContext\AmarDaktar.DataBaseContext.csproj", "{FE55C6C4-9AD4-45A4-8C5E-57216925E743}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AmarDaktar.DataBaseContext", "AmarDaktar.DataBaseContext\AmarDaktar.DataBaseContext.csproj", "{FE55C6C4-9AD4-45A4-8C5E-57216925E743}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AmarDaktar.Models", "AmarDaktar.Models\AmarDaktar.Models.csproj", "{84A20276-8698-4CC5-A843-A4104E3127DF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AmarDaktar.Models", "AmarDaktar.Models\AmarDaktar.Models.csproj", "{84A20276-8698-4CC5-A843-A4104E3127DF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AmarDaktar.IoCContainer", "AmarDaktar.IoCContainer\AmarDaktar.IoCContainer.csproj", "{B975F493-064F-4CD1-AA64-551B8660B067}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AmarDaktar.IoCContainer", "AmarDaktar.IoCContainer\AmarDaktar.IoCContainer.csproj", "{B975F493-064F-4CD1-AA64-551B8660B067}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Base", "Base\Base.csproj", "{6C4D280F-6F4E-4045-B481-AA561713406F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Base", "Base\Base.csproj", "{6C4D280F-6F4E-4045-B481-AA561713406F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AmarDaktar.Model.Contracts", "AmarDaktar.Model.Contracts\AmarDaktar.Model.Contracts.csproj", "{E484E38D-76C7-44AD-B38B-201ADF51B6DA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{6C4D280F-6F4E-4045-B481-AA561713406F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6C4D280F-6F4E-4045-B481-AA561713406F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6C4D280F-6F4E-4045-B481-AA561713406F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E484E38D-76C7-44AD-B38B-201ADF51B6DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E484E38D-76C7-44AD-B38B-201ADF51B6DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E484E38D-76C7-44AD-B38B-201ADF51B6DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E484E38D-76C7-44AD-B38B-201ADF51B6DA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,15 @@
+E:\AmarDaktar\AmarDaktarApp\Base\bin\Debug\net5.0\Base.deps.json
+E:\AmarDaktar\AmarDaktarApp\Base\bin\Debug\net5.0\Base.runtimeconfig.json
+E:\AmarDaktar\AmarDaktarApp\Base\bin\Debug\net5.0\Base.runtimeconfig.dev.json
+E:\AmarDaktar\AmarDaktarApp\Base\bin\Debug\net5.0\Base.dll
+E:\AmarDaktar\AmarDaktarApp\Base\bin\Debug\net5.0\ref\Base.dll
+E:\AmarDaktar\AmarDaktarApp\Base\bin\Debug\net5.0\Base.pdb
+E:\AmarDaktar\AmarDaktarApp\Base\obj\Debug\net5.0\Base.GeneratedMSBuildEditorConfig.editorconfig
+E:\AmarDaktar\AmarDaktarApp\Base\obj\Debug\net5.0\Base.AssemblyInfoInputs.cache
+E:\AmarDaktar\AmarDaktarApp\Base\obj\Debug\net5.0\Base.AssemblyInfo.cs
+E:\AmarDaktar\AmarDaktarApp\Base\obj\Debug\net5.0\Base.csproj.CoreCompileInputs.cache
+E:\AmarDaktar\AmarDaktarApp\Base\obj\Debug\net5.0\Base.dll
+E:\AmarDaktar\AmarDaktarApp\Base\obj\Debug\net5.0\ref\Base.dll
+E:\AmarDaktar\AmarDaktarApp\Base\obj\Debug\net5.0\Base.pdb
+E:\AmarDaktar\AmarDaktarApp\Base\obj\Debug\net5.0\Base.genruntimeconfig.cache
+E:\AmarDaktar\AmarDaktarApp\Base\obj\Debug\net5.0\Base.csprojAssemblyReference.cache

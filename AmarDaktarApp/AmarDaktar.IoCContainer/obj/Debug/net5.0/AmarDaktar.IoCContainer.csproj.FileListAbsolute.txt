@@ -1,0 +1,11 @@
+E:\AmarDaktar\AmarDaktarApp\AmarDaktar.IoCContainer\bin\Debug\net5.0\AmarDaktar.IoCContainer.deps.json
+E:\AmarDaktar\AmarDaktarApp\AmarDaktar.IoCContainer\bin\Debug\net5.0\AmarDaktar.IoCContainer.dll
+E:\AmarDaktar\AmarDaktarApp\AmarDaktar.IoCContainer\bin\Debug\net5.0\ref\AmarDaktar.IoCContainer.dll
+E:\AmarDaktar\AmarDaktarApp\AmarDaktar.IoCContainer\bin\Debug\net5.0\AmarDaktar.IoCContainer.pdb
+E:\AmarDaktar\AmarDaktarApp\AmarDaktar.IoCContainer\obj\Debug\net5.0\AmarDaktar.IoCContainer.GeneratedMSBuildEditorConfig.editorconfig
+E:\AmarDaktar\AmarDaktarApp\AmarDaktar.IoCContainer\obj\Debug\net5.0\AmarDaktar.IoCContainer.AssemblyInfoInputs.cache
+E:\AmarDaktar\AmarDaktarApp\AmarDaktar.IoCContainer\obj\Debug\net5.0\AmarDaktar.IoCContainer.AssemblyInfo.cs
+E:\AmarDaktar\AmarDaktarApp\AmarDaktar.IoCContainer\obj\Debug\net5.0\AmarDaktar.IoCContainer.csproj.CoreCompileInputs.cache
+E:\AmarDaktar\AmarDaktarApp\AmarDaktar.IoCContainer\obj\Debug\net5.0\AmarDaktar.IoCContainer.dll
+E:\AmarDaktar\AmarDaktarApp\AmarDaktar.IoCContainer\obj\Debug\net5.0\ref\AmarDaktar.IoCContainer.dll
+E:\AmarDaktar\AmarDaktarApp\AmarDaktar.IoCContainer\obj\Debug\net5.0\AmarDaktar.IoCContainer.pdb

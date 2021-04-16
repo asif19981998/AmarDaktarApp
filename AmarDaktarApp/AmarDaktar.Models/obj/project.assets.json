@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net5.0": {}
+    "net5.0": {
+      "AmarDaktar.Model.Contracts/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/AmarDaktar.Model.Contracts.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AmarDaktar.Model.Contracts.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "AmarDaktar.Model.Contracts/1.0.0": {
+      "type": "project",
+      "path": "../AmarDaktar.Model.Contracts/AmarDaktar.Model.Contracts.csproj",
+      "msbuildProject": "../AmarDaktar.Model.Contracts/AmarDaktar.Model.Contracts.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net5.0": []
+    "net5.0": [
+      "AmarDaktar.Model.Contracts >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\User\\.nuget\\packages\\": {}
@@ -33,7 +52,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "E:\\AmarDaktar\\AmarDaktarApp\\AmarDaktar.Model.Contracts\\AmarDaktar.Model.Contracts.csproj": {
+              "projectPath": "E:\\AmarDaktar\\AmarDaktarApp\\AmarDaktar.Model.Contracts\\AmarDaktar.Model.Contracts.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
