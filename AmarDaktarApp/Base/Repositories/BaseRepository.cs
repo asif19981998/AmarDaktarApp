@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Base.Repositories
 {
-    public abstract class BaseRepository<T> : IMainRepository<T> where T : class,IEntity
+    public abstract class BaseRepository<T> : IMainRepository<T> where T : class, IEntity
     {
         private DbContext _db;
         public BaseRepository(DbContext db)
@@ -27,13 +27,19 @@ namespace Base.Repositories
 
         public virtual async Task<bool> AddAsync(T entity)
         {
-             Table.AddAsync(entity);
+            Table.AddAsync(entity);
             return await SaveChangesAsync();
         }
 
         public virtual bool AddOrUpdate(Expression<Func<T, object>> identifier, ICollection<T> entityCollections)
         {
-            throw new NotImplementedException();
+            //Not Implemented Yet
+            return false;
+        }
+        private bool AddOrUpdate(T entity)
+        {
+            //Not Implemented Yet
+            return false;
         }
 
         public virtual bool AddRange(ICollection<T> entities)
@@ -50,7 +56,7 @@ namespace Base.Repositories
 
         public virtual ICollection<T> GetAll()
         {
-           return Table.ToList();
+            return Table.ToList();
         }
 
         public virtual async Task<ICollection<T>> GetAllAsync()
@@ -63,39 +69,88 @@ namespace Base.Repositories
             return Table.FirstOrDefault(c => c.Id == id);
         }
 
-        public virtual Task<T> GetByIdAsync(long id)
+        public virtual async Task<T> GetByIdAsync(long id)
         {
-            throw new NotImplementedException();
+            return await Table.FirstOrDefaultAsync(c => c.Id == id);
         }
 
-        public virtual bool Remove(T entity, bool isSoftDeleted)
+        public virtual bool Remove(T entity, bool isShiftDeleted)
         {
-            throw new NotImplementedException();
+            if (entity == null)
+            {
+                return false;
+            }
+            if (isShiftDeleted)
+            {
+                Table.Remove(entity);
+                return SaveChanges();
+            }
+            if (entity is IDeleteAble model) model.IsDeleted = true;
+            var isDeleted = Update(entity);
+            return isDeleted;
+
         }
 
-        public virtual bool RemoveRange(ICollection<T> entities, bool isSoftDelted)
+        public virtual bool RemoveRange(ICollection<T> entities, bool isShiftDeleted)
         {
-            throw new NotImplementedException();
+            if (entities == null || entities.Count<=0)
+            {
+                return false;
+            }
+            if (isShiftDeleted)
+            {
+                Table.RemoveRange(entities);
+                return SaveChanges();
+            }
+            foreach(var entity in entities)
+            {
+                if (entities is IDeleteAble model) model.IsDeleted = true;
+
+            }
+            var isDeleted = UpdateRange(entities);
+            return isDeleted;
         }
 
         public virtual bool Update(T entity)
         {
-            throw new NotImplementedException();
+            try
+            {
+                Table.Attach(entity);
+                _db.Entry(entity).State = EntityState.Modified;
+                return SaveChanges();
+
+            }
+            catch(InvalidOperationException e)
+            {
+                if (!e.Message.ToLower().Contains("attach") && !e.Message.ToLower().Contains("multiple instances"))
+                {
+                    return false;
+                }
+
+                return AddOrUpdate(entity);
+
+            }
         }
 
-        public virtual Task<bool> UpdateAsync(T entity)
+        public virtual async Task<bool> UpdateAsync(T entity)
         {
-            throw new NotImplementedException();
+            Update(entity);
+            return await SaveChangesAsync();
+           
         }
 
         public virtual bool UpdateRange(ICollection<T> entities)
         {
-            throw new NotImplementedException();
+            Table.UpdateRange(entities);
+            return SaveChanges();
         }
 
-        public virtual Task<bool> UpdateRangeAsync(ICollection<T> entities)
+        public virtual async Task<bool> UpdateRangeAsync(ICollection<T> entities)
         {
-            throw new NotImplementedException();
+            Table.UpdateRange(entities);
+            return await SaveChangesAsync();
+            
+            
         }
 
          private bool SaveChanges()

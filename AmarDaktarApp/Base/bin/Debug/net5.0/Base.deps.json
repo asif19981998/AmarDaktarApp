@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v5.0": {
       "Base/1.0.0": {
         "dependencies": {
+          "AmarDaktar.Model.Contracts": "1.0.0",
           "Microsoft.EntityFrameworkCore": "5.0.5",
           "Microsoft.EntityFrameworkCore.Design": "5.0.5"
         },
@@ -183,6 +184,11 @@
             "fileVersion": "5.0.220.61120"
           }
         }
+      },
+      "AmarDaktar.Model.Contracts/1.0.0": {
+        "runtime": {
+          "AmarDaktar.Model.Contracts.dll": {}
+        }
       }
     }
   },
@@ -324,6 +330,11 @@
       "sha512": "sha512-uXQEYqav2V3zP6OwkOKtLv+qIi6z3m1hsGyKwXX7ZA7htT4shoVccGxnJ9kVRFPNAsi1ArZTq2oh7WOto6GbkQ==",
       "path": "system.diagnostics.diagnosticsource/5.0.1",
       "hashPath": "system.diagnostics.diagnosticsource.5.0.1.nupkg.sha512"
+    },
+    "AmarDaktar.Model.Contracts/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

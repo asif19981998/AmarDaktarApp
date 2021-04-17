@@ -25,7 +25,7 @@ namespace Base.Contracts
         Task<bool> UpdateRangeAsync(ICollection<T> entities);
         bool AddOrUpdate(Expression<Func<T, object>> identifier, ICollection<T> entityCollections);
 
-        bool Remove(T entity,bool isSoftDeleted=false);
-        bool RemoveRange(ICollection<T> entities, bool isSoftDelted = false);
+        bool Remove(T entity,bool isShiftDeleted = false);
+        bool RemoveRange(ICollection<T> entities, bool isShiftDeleted = false);
     }
 }

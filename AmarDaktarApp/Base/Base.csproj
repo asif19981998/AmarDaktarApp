@@ -12,4 +12,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\AmarDaktar.Model.Contracts\AmarDaktar.Model.Contracts.csproj" />
+  </ItemGroup>
+
 </Project>
