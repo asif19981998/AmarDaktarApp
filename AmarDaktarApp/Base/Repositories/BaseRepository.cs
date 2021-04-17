@@ -1,15 +1,16 @@
-﻿using Base.Contracts;
+﻿using AmarDaktar.Model.Contracts.EntityContracts;
+using Base.Contracts;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
 using System.Threading.Tasks;
+
 
 namespace Base.Repositories
 {
-    public class BaseRepository<T> : IMainRepository<T> where T : class
+    public abstract class BaseRepository<T> : IMainRepository<T> where T : class,IEntity
     {
         private DbContext _db;
         public BaseRepository(DbContext db)
@@ -18,92 +19,92 @@ namespace Base.Repositories
         }
         DbSet<T> Table => _db.Set<T>();
 
-        bool IMainRepository<T>.Add(T entity)
+        public virtual bool Add(T entity)
         {
             Table.Add(entity);
             return SaveChanges();
         }
 
-        Task<bool> IMainRepository<T>.AddAsync(T entity)
+        public virtual async Task<bool> AddAsync(T entity)
         {
-            Table.AddAsync(entity);
-            return SaveChangesAsync();
+             Table.AddAsync(entity);
+            return await SaveChangesAsync();
         }
 
-        bool IMainRepository<T>.AddOrUpdate(Expression<Func<T, object>> identifier, ICollection<T> entityCollections)
+        public virtual bool AddOrUpdate(Expression<Func<T, object>> identifier, ICollection<T> entityCollections)
         {
             throw new NotImplementedException();
         }
 
-        bool IMainRepository<T>.AddRange(ICollection<T> entities)
+        public virtual bool AddRange(ICollection<T> entities)
         {
             Table.AddRange(entities);
             return SaveChanges();
         }
 
-        Task<bool> IMainRepository<T>.AddRangeAsync(ICollection<T> entities)
+        public virtual async Task<bool> AddRangeAsync(ICollection<T> entities)
         {
             Table.AddRangeAsync(entities);
-            return SaveChangesAsync();
+            return await SaveChangesAsync();
         }
 
-        ICollection<T> IMainRepository<T>.GetAll()
+        public virtual ICollection<T> GetAll()
+        {
+           return Table.ToList();
+        }
+
+        public virtual async Task<ICollection<T>> GetAllAsync()
+        {
+            return await Table.ToListAsync();
+        }
+
+        public virtual T GetById(long id)
+        {
+            return Table.FirstOrDefault(c => c.Id == id);
+        }
+
+        public virtual Task<T> GetByIdAsync(long id)
         {
             throw new NotImplementedException();
         }
 
-        Task<ICollection<T>> IMainRepository<T>.GetAllAsync()
+        public virtual bool Remove(T entity, bool isSoftDeleted)
         {
             throw new NotImplementedException();
         }
 
-        T IMainRepository<T>.GetById(long id)
+        public virtual bool RemoveRange(ICollection<T> entities, bool isSoftDelted)
         {
             throw new NotImplementedException();
         }
 
-        Task<T> IMainRepository<T>.GetByIdAsync(long id)
+        public virtual bool Update(T entity)
         {
             throw new NotImplementedException();
         }
 
-        bool IMainRepository<T>.Remove(T entity, bool isSoftDeleted)
+        public virtual Task<bool> UpdateAsync(T entity)
         {
             throw new NotImplementedException();
         }
 
-        bool IMainRepository<T>.RemoveRange(ICollection<T> entities, bool isSoftDelted)
+        public virtual bool UpdateRange(ICollection<T> entities)
         {
             throw new NotImplementedException();
         }
 
-        bool IMainRepository<T>.Update(T entity)
+        public virtual Task<bool> UpdateRangeAsync(ICollection<T> entities)
         {
             throw new NotImplementedException();
         }
 
-        Task<bool> IMainRepository<T>.UpdateAsync(T entity)
-        {
-            throw new NotImplementedException();
-        }
-
-        bool IMainRepository<T>.UpdateRange(ICollection<T> entities)
-        {
-            throw new NotImplementedException();
-        }
-
-        Task<bool> IMainRepository<T>.UpdateRangeAsync(ICollection<T> entities)
-        {
-            throw new NotImplementedException();
-        }
-
-        private bool SaveChanges()
+         private bool SaveChanges()
         {
            
             return _db.SaveChanges() > 0;
         }
 
-        private async Task<bool> SaveChangesAsync()
+         private async Task<bool> SaveChangesAsync()
         {
             
             return await _db.SaveChangesAsync() > 0;
