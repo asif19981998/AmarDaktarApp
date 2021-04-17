@@ -7,14 +7,27 @@
   "targets": {
     ".NETCoreApp,Version=v5.0": {
       "AmarDaktar.Repositories/1.0.0": {
+        "dependencies": {
+          "AmarDaktar.Repositories.Abastractions": "1.0.0"
+        },
         "runtime": {
           "AmarDaktar.Repositories.dll": {}
+        }
+      },
+      "AmarDaktar.Repositories.Abastractions/1.0.0": {
+        "runtime": {
+          "AmarDaktar.Repositories.Abastractions.dll": {}
         }
       }
     }
   },
   "libraries": {
     "AmarDaktar.Repositories/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AmarDaktar.Repositories.Abastractions/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

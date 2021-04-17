@@ -2,7 +2,6 @@ E:\AmarDaktar\AmarDaktarApp\AmarDaktar.BLL\bin\Debug\net5.0\AmarDaktar.BLL.deps.
 E:\AmarDaktar\AmarDaktarApp\AmarDaktar.BLL\bin\Debug\net5.0\AmarDaktar.BLL.dll
 E:\AmarDaktar\AmarDaktarApp\AmarDaktar.BLL\bin\Debug\net5.0\ref\AmarDaktar.BLL.dll
 E:\AmarDaktar\AmarDaktarApp\AmarDaktar.BLL\bin\Debug\net5.0\AmarDaktar.BLL.pdb
-E:\AmarDaktar\AmarDaktarApp\AmarDaktar.BLL\obj\Debug\net5.0\AmarDaktar.BLL.csprojAssemblyReference.cache
 E:\AmarDaktar\AmarDaktarApp\AmarDaktar.BLL\obj\Debug\net5.0\AmarDaktar.BLL.GeneratedMSBuildEditorConfig.editorconfig
 E:\AmarDaktar\AmarDaktarApp\AmarDaktar.BLL\obj\Debug\net5.0\AmarDaktar.BLL.AssemblyInfoInputs.cache
 E:\AmarDaktar\AmarDaktarApp\AmarDaktar.BLL\obj\Debug\net5.0\AmarDaktar.BLL.AssemblyInfo.cs
@@ -10,3 +9,4 @@ E:\AmarDaktar\AmarDaktarApp\AmarDaktar.BLL\obj\Debug\net5.0\AmarDaktar.BLL.cspro
 E:\AmarDaktar\AmarDaktarApp\AmarDaktar.BLL\obj\Debug\net5.0\AmarDaktar.BLL.dll
 E:\AmarDaktar\AmarDaktarApp\AmarDaktar.BLL\obj\Debug\net5.0\ref\AmarDaktar.BLL.dll
 E:\AmarDaktar\AmarDaktarApp\AmarDaktar.BLL\obj\Debug\net5.0\AmarDaktar.BLL.pdb
+E:\AmarDaktar\AmarDaktarApp\AmarDaktar.BLL\obj\Debug\net5.0\AmarDaktar.BLL.csprojAssemblyReference.cache

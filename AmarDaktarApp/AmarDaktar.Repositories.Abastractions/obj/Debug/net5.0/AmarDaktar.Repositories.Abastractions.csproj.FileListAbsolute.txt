@@ -2,7 +2,6 @@ E:\AmarDaktar\AmarDaktarApp\AmarDaktar.Repositories.Abastractions\bin\Debug\net5
 E:\AmarDaktar\AmarDaktarApp\AmarDaktar.Repositories.Abastractions\bin\Debug\net5.0\AmarDaktar.Repositories.Abastractions.dll
 E:\AmarDaktar\AmarDaktarApp\AmarDaktar.Repositories.Abastractions\bin\Debug\net5.0\ref\AmarDaktar.Repositories.Abastractions.dll
 E:\AmarDaktar\AmarDaktarApp\AmarDaktar.Repositories.Abastractions\bin\Debug\net5.0\AmarDaktar.Repositories.Abastractions.pdb
-E:\AmarDaktar\AmarDaktarApp\AmarDaktar.Repositories.Abastractions\obj\Debug\net5.0\AmarDaktar.Repositories.Abastractions.csprojAssemblyReference.cache
 E:\AmarDaktar\AmarDaktarApp\AmarDaktar.Repositories.Abastractions\obj\Debug\net5.0\AmarDaktar.Repositories.Abastractions.GeneratedMSBuildEditorConfig.editorconfig
 E:\AmarDaktar\AmarDaktarApp\AmarDaktar.Repositories.Abastractions\obj\Debug\net5.0\AmarDaktar.Repositories.Abastractions.AssemblyInfoInputs.cache
 E:\AmarDaktar\AmarDaktarApp\AmarDaktar.Repositories.Abastractions\obj\Debug\net5.0\AmarDaktar.Repositories.Abastractions.AssemblyInfo.cs
