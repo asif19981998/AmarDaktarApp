@@ -2,8 +2,16 @@ E:\AmarDaktar\AmarDaktarApp\AmarDaktar.Repositories\bin\Debug\net5.0\AmarDaktar.
 E:\AmarDaktar\AmarDaktarApp\AmarDaktar.Repositories\bin\Debug\net5.0\AmarDaktar.Repositories.dll
 E:\AmarDaktar\AmarDaktarApp\AmarDaktar.Repositories\bin\Debug\net5.0\ref\AmarDaktar.Repositories.dll
 E:\AmarDaktar\AmarDaktarApp\AmarDaktar.Repositories\bin\Debug\net5.0\AmarDaktar.Repositories.pdb
+E:\AmarDaktar\AmarDaktarApp\AmarDaktar.Repositories\bin\Debug\net5.0\AmarDaktar.DataBaseContext.dll
+E:\AmarDaktar\AmarDaktarApp\AmarDaktar.Repositories\bin\Debug\net5.0\AmarDaktar.Model.Contracts.dll
+E:\AmarDaktar\AmarDaktarApp\AmarDaktar.Repositories\bin\Debug\net5.0\AmarDaktar.Models.dll
 E:\AmarDaktar\AmarDaktarApp\AmarDaktar.Repositories\bin\Debug\net5.0\AmarDaktar.Repositories.Abastractions.dll
+E:\AmarDaktar\AmarDaktarApp\AmarDaktar.Repositories\bin\Debug\net5.0\Base.dll
+E:\AmarDaktar\AmarDaktarApp\AmarDaktar.Repositories\bin\Debug\net5.0\AmarDaktar.DataBaseContext.pdb
 E:\AmarDaktar\AmarDaktarApp\AmarDaktar.Repositories\bin\Debug\net5.0\AmarDaktar.Repositories.Abastractions.pdb
+E:\AmarDaktar\AmarDaktarApp\AmarDaktar.Repositories\bin\Debug\net5.0\AmarDaktar.Model.Contracts.pdb
+E:\AmarDaktar\AmarDaktarApp\AmarDaktar.Repositories\bin\Debug\net5.0\AmarDaktar.Models.pdb
+E:\AmarDaktar\AmarDaktarApp\AmarDaktar.Repositories\bin\Debug\net5.0\Base.pdb
 E:\AmarDaktar\AmarDaktarApp\AmarDaktar.Repositories\obj\Debug\net5.0\AmarDaktar.Repositories.csprojAssemblyReference.cache
 E:\AmarDaktar\AmarDaktarApp\AmarDaktar.Repositories\obj\Debug\net5.0\AmarDaktar.Repositories.GeneratedMSBuildEditorConfig.editorconfig
 E:\AmarDaktar\AmarDaktarApp\AmarDaktar.Repositories\obj\Debug\net5.0\AmarDaktar.Repositories.AssemblyInfoInputs.cache

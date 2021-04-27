@@ -12,9 +12,9 @@ namespace Base.Services
     public abstract class BaseService<T> : IMainService<T> where T : class
     {
         private IMainRepository<T> _repository;
-        public BaseService(IMainRepository<T> repository)
+        public BaseService(IMainRepository<T> iRepository)
         {
-            _repository = repository;
+            _repository = iRepository;
         }
         public virtual bool Add(T entity)
         {

@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\AmarDaktar.DataBaseContext\AmarDaktar.DataBaseContext.csproj" />
     <ProjectReference Include="..\AmarDaktar.Repositories.Abastractions\AmarDaktar.Repositories.Abastractions.csproj" />
   </ItemGroup>
 

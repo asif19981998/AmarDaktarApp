@@ -11,23 +11,25 @@ namespace AmarDaktar.Repositories.UnitOfWork
 {
     public class UnitOfWork : IUnitOfWork
     {
+        private readonly AmarDaktarDbContext _db;
         public UnitOfWork(AmarDaktarDbContext db)
         {
-
+            _db = db; 
         }
      
         public bool SaveChanges()
         {
-            throw new NotImplementedException();
+            return _db.SaveChanges() >0;
         }
 
-        public Task<bool> SaveChangesAsync()
+        
+        public async Task<bool> SaveChangesAsync()
         {
-            return null;
+            return await _db.SaveChangesAsync() > 0;
         }
         public void Dispose()
         {
-            throw new NotImplementedException();
+            _db.Dispose();
         }
     }
 }

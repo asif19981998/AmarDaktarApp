@@ -14,7 +14,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\AmarDaktar.BLL.Repositories\AmarDaktar.BLL.Contracts.csproj" />
     <ProjectReference Include="..\AmarDaktar.DataBaseContext\AmarDaktar.DataBaseContext.csproj" />
+    <ProjectReference Include="..\AmarDaktar.IoCContainer\AmarDaktar.IoCContainer.csproj" />
+    <ProjectReference Include="..\AmarDaktar.Repositories.Abastractions\AmarDaktar.Repositories.Abastractions.csproj" />
+    <ProjectReference Include="..\AmarDaktarBase\AmarDaktarBase.csproj" />
   </ItemGroup>
 
 </Project>

@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace AmarDaktar.Repositories.Abastractions.IUnitWork
 {
-    interface IUnitOfWork
+    public interface IUnitOfWork:IDisposable
     {
+        bool SaveChanges();
+        Task<bool> SaveChangesAsync();
     }
 }
