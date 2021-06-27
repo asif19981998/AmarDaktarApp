@@ -38,6 +38,7 @@ namespace AmarDaktarApp
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "AmarDaktarApp", Version = "v1" });
             });
+            services.AddCors(options => options.AddDefaultPolicy(builder => builder.WithOrigins("https://localhost:44381")));
             services.AddDbContext<AmarDaktarDbContext>(option =>
             option.UseSqlServer(Configuration.GetConnectionString("AppConnectionString")));
             IoCContainer.Configure(services);
@@ -56,7 +57,7 @@ namespace AmarDaktarApp
             app.UseHttpsRedirection();
 
             app.UseRouting();
-
+            app.UseCors();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

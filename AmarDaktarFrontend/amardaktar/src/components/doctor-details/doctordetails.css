@@ -1,0 +1,39 @@
+.doctor-card{
+    margin-top: 4px;
+   
+}
+/* .profile-pic{
+ width: 15%; 
+} */
+.profile-pic img{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+}
+.doctor-main{
+    display: flex;
+     padding: 15px;
+}
+.doctor-info{
+    padding-left: 27px;
+    width: 60%; 
+    font-size: 15px;
+    
+}
+.border-area{
+    height: 100%;
+    width: 2px;
+    color: gray;
+}
+.doctor-more-info{
+    /* width: 15%; */
+    font-size: 15px;
+    padding-left: 25px;
+}
+.appointment-button{
+    position: relative;
+}
+
+.doctor-card:hover .appointment-button{
+    background-color: red;
+}

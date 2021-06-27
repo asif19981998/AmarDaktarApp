@@ -1,0 +1,44 @@
+.cover-area{
+    background-image: url("../image/hand-shake.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    height: 400px;
+    width: 100%;
+}
+
+.cover-content{
+  background-color: black;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;  
+  opacity: .6;
+  color: #ffffff;
+ 
+}
+.cover-button{
+    width: 52%;
+    display: flex;
+    flex-direction: row-reverse;
+    
+}
+.doctor-type-search{
+    display: flex;
+    align-items: center;
+    background-color: #eff2f5;
+    padding: 10px;
+    margin-left: 10px;
+    border-radius: 999px;
+    width: 52%;
+    margin-top: 15px;
+}
+.doctor-type-search .sIcon{
+    color:#000;
+}
+.doctor-type-search > input {
+    border: none;
+    background-color: transparent;
+    outline-width: 0;
+}
