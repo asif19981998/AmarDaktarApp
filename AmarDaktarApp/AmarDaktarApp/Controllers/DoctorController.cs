@@ -41,7 +41,8 @@ namespace AmarDaktarApp.Controllers
         [HttpPost]
         public bool Post(Doctor doctor)
         {
-            return _service.Add(doctor);
+          bool  isSubmitterd = _service.Add(doctor);
+            return isSubmitterd;
         }
 
         // PUT api/<DoctorController>/5

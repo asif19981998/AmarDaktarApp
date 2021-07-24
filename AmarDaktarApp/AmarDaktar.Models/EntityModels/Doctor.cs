@@ -19,6 +19,9 @@ namespace AmarDaktar.Models.EntityModels
         public string BMDC { get; set; }
         public double Fees { get; set; }
         public string PhoneNo { get; set; }
+        public string Password { get; set; }
+        public string Gender { get; set; }
+        public string Department { get; set; }
 
         public string Email { get; set; }
         public string MeetUrl { get; set; }

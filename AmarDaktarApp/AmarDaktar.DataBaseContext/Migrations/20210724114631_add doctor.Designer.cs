@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AmarDaktar.DataBaseContext.Migrations
 {
     [DbContext(typeof(AmarDaktarDbContext))]
-    [Migration("20210416192728_Add Doctor model")]
-    partial class AddDoctormodel
+    [Migration("20210724114631_add doctor")]
+    partial class adddoctor
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -40,6 +40,9 @@ namespace AmarDaktar.DataBaseContext.Migrations
                     b.Property<DateTime?>("DeletedOn")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("Department")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
@@ -51,6 +54,9 @@ namespace AmarDaktar.DataBaseContext.Migrations
 
                     b.Property<double>("Fees")
                         .HasColumnType("float");
+
+                    b.Property<string>("Gender")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ImageUrl")
                         .HasColumnType("nvarchar(max)");
@@ -65,6 +71,9 @@ namespace AmarDaktar.DataBaseContext.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Password")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PhoneNo")

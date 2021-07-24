@@ -1,10 +1,13 @@
 import React from 'react'
-import Dropdown from '../navbar/dropdown'
+import CreateDoctor from '../create-doctor/create-doctor'
+
 
 function Doctor() {
     return (
         <div>
-            Doctor
+            
+
+            <CreateDoctor/>
            
         </div>
     )

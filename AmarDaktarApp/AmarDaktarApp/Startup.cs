@@ -57,7 +57,13 @@ namespace AmarDaktarApp
             app.UseHttpsRedirection();
 
             app.UseRouting();
-            app.UseCors();
+            app.UseCors(options =>
+            {
+                options.WithOrigins(new[] { "http://localhost:3000" });
+                options.AllowAnyHeader();
+                options.AllowAnyHeader();
+                options.AllowCredentials();
+            });
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

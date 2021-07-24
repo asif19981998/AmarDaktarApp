@@ -1,0 +1,15 @@
+.create-doctor {
+    margin-top: 5px;
+    width: 35%  !important;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+}
+.MuiTextField-root , .radio-area , .submitButton {
+   margin-top: 15px  !important;
+}
+.submitButton{
+    display: flex;
+    justify-content: flex-end;
+}

@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace AmarDaktar.DataBaseContext.Migrations
 {
-    public partial class AddDoctormodel : Migration
+    public partial class adddoctor : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -22,6 +22,9 @@ namespace AmarDaktar.DataBaseContext.Migrations
                     BMDC = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Fees = table.Column<double>(type: "float", nullable: false),
                     PhoneNo = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Password = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Gender = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Department = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     MeetUrl = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     FacebookUrl = table.Column<string>(type: "nvarchar(max)", nullable: true),
