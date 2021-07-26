@@ -81,3 +81,5 @@ E:\AmarDaktar\AmarDaktarApp\AmarDaktarApp\obj\Debug\net5.0\ref\AmarDaktarApp.dll
 E:\AmarDaktar\AmarDaktarApp\AmarDaktarApp\obj\Debug\net5.0\AmarDaktarApp.pdb
 E:\AmarDaktar\AmarDaktarApp\AmarDaktarApp\obj\Debug\net5.0\AmarDaktarApp.genruntimeconfig.cache
 E:\AmarDaktar\AmarDaktarApp\AmarDaktarApp\obj\Debug\net5.0\AmarDaktarApp.csproj.AssemblyReference.cache
+E:\AmarDaktar\AmarDaktarApp\AmarDaktarApp\bin\Debug\net5.0\AutoMapper.dll
+E:\AmarDaktar\AmarDaktarApp\AmarDaktarApp\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

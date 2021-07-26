@@ -1,8 +1,9 @@
 ﻿
 using AmarDaktar.BLL.Contracts;
 using AmarDaktar.Models.EntityModels;
+using AmarDaktar.Models.ViewModel.Doctor;
 using AmarDaktar.Repositories.Abastractions.IUnitWork;
-
+using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -18,9 +19,11 @@ namespace AmarDaktarApp.Controllers
     public class DoctorController : AppController
     {
         private IDoctorService _service;
-        public DoctorController(IDoctorService iService,IUnitOfWork iUnitOfWork):base(iUnitOfWork)
+        private IMapper _mapper;
+        public DoctorController(IDoctorService iService,IUnitOfWork iUnitOfWork,IMapper mapper):base(iUnitOfWork)
         {
             _service = iService;
+            _mapper = mapper;
 
         }
         // GET: api/<DoctorController>
@@ -39,8 +42,9 @@ namespace AmarDaktarApp.Controllers
 
         // POST api/<DoctorController>
         [HttpPost]
-        public bool Post(Doctor doctor)
+        public bool Post(DoctorCreateVM model)
         {
+           var doctor = _mapper.Map<Doctor>(model);
           bool  isSubmitterd = _service.Add(doctor);
             return isSubmitterd;
         }
