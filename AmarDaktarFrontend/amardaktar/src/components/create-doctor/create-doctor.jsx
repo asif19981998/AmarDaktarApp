@@ -11,35 +11,14 @@ import Select from '@material-ui/core/Select';
 import axios from 'axios';
 import Joi from "joi-browser"
 import "./create-doctor.css"
-
+import Doctor from '../../classes/Doctor';
 // import MaterialTextField from '../../utils/textfield';
 import Form from '../../common/form';
 import {deleteable} from './../../common/deleteable';
 class CreateDoctor extends Form {
     
      state={
-            data:
-            {
-            id:0,
-            name:"",
-            phoneNo:"",
-            bmdc:"",
-            email:"",
-            password:"",
-            gender:"",
-            department:"",
-            imageUrl:"",
-            degree:"",
-            specialList:"",
-            description:"",
-            yearsOfExperience:0,
-            fees:0,
-            meetUrl:"",
-            facebookUrl:"",
-            twitterUrl:"",
-            LinkinUrl:"",
-            deleteable
-          },
+            data:new Doctor(),
             errors:{}
         }
         
@@ -52,12 +31,28 @@ class CreateDoctor extends Form {
         password:Joi.string().required(),
         gender:Joi.string().required(),
         department:Joi.string().required(),
-       
+            id:0,
+            
+            imageUrl:"",
+            degree:"",
+            specialList:"",
+            description:"",
+            yearsOfExperience:0,
+            fees:0,
+            meetUrl:"",
+            facebookUrl:"",
+            twitterUrl:"",
+            LinkinUrl:"",
+
+            isDeteted:false,
+            deletedById:0,
+            deletedOn:Date()
         
       }
     
   
   doSubmit=()=>{
+    console.log(" Before Api")
     const url = "https://localhost:5001/api/doctor"
     axios.get(url).then(result=>{
          console.log(result)
@@ -77,6 +72,7 @@ class CreateDoctor extends Form {
 render(){
     const {data,errors}=this.state
     return (
+      <div className="container">
         <div className="create-doctor ">
         <h1>Create Doctor</h1>
        <form onSubmit={this.handleSubmit}  noValidate autoComplete="off" className="form">
@@ -132,7 +128,7 @@ render(){
   
     </div>
      
-           
+        </div>
        
         )
 }

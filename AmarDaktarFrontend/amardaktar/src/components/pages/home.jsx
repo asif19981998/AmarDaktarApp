@@ -8,9 +8,7 @@ function Home() {
         <div>
              <CoverImage/>   
              <DoctorDetials/>
-             <DoctorDetials/>
-             <DoctorDetials/>
-             <DoctorDetials/> 
+             
              
         </div>
     )

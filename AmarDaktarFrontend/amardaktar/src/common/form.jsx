@@ -31,21 +31,26 @@ export default class Form extends Component{
    e.preventDefault();
    console.log( "Handle Submit Called")
    console.log(this.state.errors)
-    // const errors = this.validate()
-    // this.setState({ errors: errors || {} })
+    const errors = this.validate()
+    this.setState({ errors: errors || {} })
    
-    // if (errors) return;
+    if (errors) {
+       console.log("error found",errors)
+       return;
+
+
+    }
    this.doSubmit()
 }
 
  handleChange=({ currentTarget: input })=> {
     const errors_copy = {...this.errors}
-     if( Object.keys(this.schema).includes(input.name)){
+     
   
       const errorMessage = this.validateProperty(input)
       if(errorMessage) errors_copy[input.name]=errorMessage
       else delete errors_copy[input.name]
-    }
+    
   
      
       const data = { ...this.state.data };
@@ -58,7 +63,7 @@ export default class Form extends Component{
    renderMaterialButton(label){
      return (
       // disabled={this.validate()}
-      <Button  variant="contained" color="primary" type="submit">
+      <Button disabled={this.validate()}   variant="contained" color="primary" type="submit">
      {label}
      </Button>
      )

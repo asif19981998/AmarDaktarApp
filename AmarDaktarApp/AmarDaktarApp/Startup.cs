@@ -36,6 +36,8 @@ namespace AmarDaktarApp
         {
             
             services.AddControllers();
+
+            //TODO:Why number 40 isnot work though 41 work...
             //services.AddAutoMapper(typeof(Startup));
             var mappingConfig = new MapperConfiguration(mc =>
             {
@@ -81,6 +83,7 @@ namespace AmarDaktarApp
             {
                 endpoints.MapControllers();
             });
+
         }
     }
 }
