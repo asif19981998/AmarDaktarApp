@@ -15,5 +15,7 @@ namespace AmarDaktar.DataBaseContext
 
         }
         DbSet<Doctor> Doctors { get; set; }
+        
+
     }
 }

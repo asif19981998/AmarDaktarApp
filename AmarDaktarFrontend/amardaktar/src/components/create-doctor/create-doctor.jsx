@@ -11,7 +11,7 @@ import Select from '@material-ui/core/Select';
 import axios from 'axios';
 import Joi from "joi-browser"
 import "./create-doctor.css"
-import Doctor from '../../classes/Doctor';
+import Doctor from '../../classes/Doctor.jsx';
 // import MaterialTextField from '../../utils/textfield';
 import Form from '../../common/form';
 import {deleteable} from './../../common/deleteable';
@@ -19,36 +19,38 @@ class CreateDoctor extends Form {
     
      state={
             data:new Doctor(),
-            errors:{}
+            // errors:{}
         }
         
     
-   schema={
-        name:Joi.string().required().label("Full Name"),
-        phoneNo:Joi.string().required(),
-        bmdc:Joi.string().required(),
-        email:Joi.string().required().label("Email"),
-        password:Joi.string().required(),
-        gender:Joi.string().required(),
-        department:Joi.string().required(),
-            id:0,
+  //  schema={
+  //       name:Joi.string().required().label("Full Name"),
+  //       phoneNo:Joi.string().required(),
+  //       bmdc:Joi.string().required(),
+  //       email:Joi.string().required().label("Email"),
+  //       password:Joi.string().required(),
+  //       gender:Joi.string().required(),
+  //       department:Joi.string().required(),
+  //           id:0,
             
-            imageUrl:"",
-            degree:"",
-            specialList:"",
-            description:"",
-            yearsOfExperience:0,
-            fees:0,
-            meetUrl:"",
-            facebookUrl:"",
-            twitterUrl:"",
-            LinkinUrl:"",
+  //           imageName:"",
+  //           // imageSrc:"",
+  //           // imageFile:null,
+  //           degree:"",
+  //           specialList:"",
+  //           description:"",
+  //           yearsOfExperience:0,
+  //           fees:0,
+  //           meetUrl:"",
+  //           facebookUrl:"",
+  //           twitterUrl:"",
+  //           LinkinUrl:"",
 
-            isDeteted:false,
-            deletedById:0,
-            deletedOn:Date()
+  //           isDeteted:false,
+  //           deletedById:0,
+  //           deletedOn:Date()
         
-      }
+  //     }
     
   
   doSubmit=()=>{
@@ -58,7 +60,7 @@ class CreateDoctor extends Form {
          console.log(result)
        })
         // server call
-        console.log("server call")
+        console.log(this.state.data)
         axios.post(url,this.state.data).then(result=>{
           console.log(result)
         })
@@ -79,16 +81,16 @@ render(){
   
           {this.renderMaterialInput("name","Full Name")}
             
-          {errors.name && <div style={{color:"red"}}>{errors.name}</div>}
+          {/* {errors.name && <div style={{color:"red"}}>{errors.name}</div>} */}
           
           {this.renderMaterialInput("phoneNo","Phone No")}
           {this.renderMaterialInput("email","Email")}
           
-          {errors.email && <div style={{color:"red"}}>{errors.email}</div>}
+          {/* {errors.email && <div style={{color:"red"}}>{errors.email}</div>} */}
           {this.renderMaterialInput("password","Password","password")}
           {this.renderMaterialInput("bmdc","BMDC Number")}
       
-       
+          {this.renderInputForImage("imageSrc","DoctorImage")}
 
 
        <div  className="radio-area">

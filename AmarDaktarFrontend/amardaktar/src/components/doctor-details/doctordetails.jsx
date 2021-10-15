@@ -111,13 +111,18 @@ function DoctorDetials() {
         </Card>
    
          ))}
+         <div className="pagination-area">
+             
          <Pagination
         itemsCount={totalCount}
         pageSize={size}
         currentPage={currentPage}
         handlePageChange={handlePageChange}
+        />
+        
+        </div>
+        
        
-       />
 
       
         </div>

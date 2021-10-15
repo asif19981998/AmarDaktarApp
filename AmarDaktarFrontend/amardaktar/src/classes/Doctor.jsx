@@ -1,3 +1,4 @@
+// import ImageDataSrc from "../image/image_placeholder.png"
 export default class Doctor{
             id=0;
             name="";
@@ -7,7 +8,9 @@ export default class Doctor{
             password="";
             gender="";
             department="";
-            imageUrl="";
+            imageName="";
+            imageSrc="";
+            imageFile=null;
             degree="";
             specialList="";
             description="";
