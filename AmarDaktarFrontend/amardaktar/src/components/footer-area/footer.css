@@ -1,6 +1,8 @@
 .body {
     height:200px;
     width: 100%;
-    background-color: aqua;
-    margin:5px
+    background-color: red;
+    margin:5px;
+    text-align: center;
+    padding-top: 5px;
 }

@@ -56,12 +56,41 @@ class CreateDoctor extends Form {
   doSubmit=()=>{
     console.log(" Before Api")
     const url = "https://localhost:5001/api/doctor"
-    axios.get(url).then(result=>{
-         console.log(result)
-       })
         // server call
         console.log(this.state.data)
-        axios.post(url,this.state.data).then(result=>{
+        const formData = new FormData();
+        var values = this.state.data;
+       
+       
+        formData.append("id",values.id);
+        formData.append("name",values.name);
+        formData.append("imageFile",values.imageFile);
+        formData.append("imageName",values.imageName);
+        formData.append("imageSrc",values.imageSrc);
+        formData.append("degree",values.degree);
+        formData.append("specialList",values.specialList);
+        formData.append("description",values.description);
+        formData.append("yearsOfExperience",values.yearsOfExperience);
+        formData.append("bmdc",values.bmdc);
+        formData.append("fees",values.fees);
+        formData.append("phoneNo",values.phoneNo);
+        formData.append("password",values.password);
+        formData.append("gender",values.gender);
+        formData.append("department",values.department);
+        formData.append("email",values.email);
+        formData.append("meetUrl",values.meetUrl);
+        formData.append("facebookUrl",values.faceBookUrl);
+        formData.append("twitterUrl",values.twitterUrl);
+        formData.append("linkinUrl",values.linkinUrl);
+        formData.append("isDeleted",values.isDeleted);
+        formData.append("deletedById",values.deletedById);
+        formData.append("deletedOn",values.deletedOn);
+        formData.append("position",values.position);
+       
+       
+        console.log(values)
+        console.log(formData)
+        axios.post(url,formData).then(result=>{
           console.log(result)
         })
        
@@ -80,16 +109,14 @@ render(){
        <form onSubmit={this.handleSubmit}  noValidate autoComplete="off" className="form">
   
           {this.renderMaterialInput("name","Full Name")}
-            
-          {/* {errors.name && <div style={{color:"red"}}>{errors.name}</div>} */}
-          
           {this.renderMaterialInput("phoneNo","Phone No")}
           {this.renderMaterialInput("email","Email")}
-          
-          {/* {errors.email && <div style={{color:"red"}}>{errors.email}</div>} */}
           {this.renderMaterialInput("password","Password","password")}
           {this.renderMaterialInput("bmdc","BMDC Number")}
-      
+          {this.renderMaterialInput("degree","Degree")}
+          {this.renderMaterialInput("position","Position")}
+          {this.renderMaterialInput("yearsOfExperience","Years of Experience","number")}
+          {this.renderMaterialInput("fees","Fees","number")}
           {this.renderInputForImage("imageSrc","DoctorImage")}
 
 

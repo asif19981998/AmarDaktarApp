@@ -83,3 +83,6 @@ E:\AmarDaktar\AmarDaktarApp\AmarDaktarApp\obj\Debug\net5.0\AmarDaktarApp.genrunt
 E:\AmarDaktar\AmarDaktarApp\AmarDaktarApp\obj\Debug\net5.0\AmarDaktarApp.csproj.AssemblyReference.cache
 E:\AmarDaktar\AmarDaktarApp\AmarDaktarApp\bin\Debug\net5.0\AutoMapper.dll
 E:\AmarDaktar\AmarDaktarApp\AmarDaktarApp\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+E:\AmarDaktar\AmarDaktarApp\AmarDaktarApp\bin\Debug\net5.0\Microsoft.AspNetCore.Http.Features.dll
+E:\AmarDaktar\AmarDaktarApp\AmarDaktarApp\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
+E:\AmarDaktar\AmarDaktarApp\AmarDaktarApp\bin\Debug\net5.0\System.IO.Pipelines.dll

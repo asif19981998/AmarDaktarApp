@@ -1,6 +1,8 @@
 ﻿using AmarDaktar.Model.Contracts.EntityContracts;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,7 +13,7 @@ namespace AmarDaktar.Models.EntityModels
     {
         public long Id { get; set; }
         public string Name { get; set; }
-        public string ImageUrl { get; set; }
+        public string ImageName { get; set; }
         public string Degree { get;set;}
         public string Specialist { get; set; }
         public string Description { get; set; }
@@ -28,8 +30,14 @@ namespace AmarDaktar.Models.EntityModels
         public string FacebookUrl { get; set; }
         public string TwitterUrl { get; set; }
         public string LinkinUrl { get; set; }
+        public string Position { get; set; }
         public bool IsDeleted { get ; set; }
-        
+        [NotMapped]
+        public IFormFile ImageFile { get; set; }
+
+        [NotMapped]
+        public string ImageSrc { get; set; }
+
         public long? DeletedById { get ; set; }
         public DateTime? DeletedOn { get; set; }
         

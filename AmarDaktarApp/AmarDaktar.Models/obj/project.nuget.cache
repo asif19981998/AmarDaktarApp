@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "4xwnlgVBh1zjMDK+Y2RNlYNHx1K4kR2ClaMKeFerfAN6kVO+8OapyfLOVCV7YQemjPPOJnZ8N3rZnRopJFAihA==",
+  "dgSpecHash": "LNgueqVlj7VTWMOchbNv51ispz1zRF4BK20xt93IF0ykYajyWfgJZijctNDW0kKQpJFL0Y3YhdrRRc9s1CqmMA==",
   "success": true,
   "projectFilePath": "E:\\AmarDaktar\\AmarDaktarApp\\AmarDaktar.Models\\AmarDaktar.Models.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.11\\microsoft.aspnetcore.http.features.5.0.11.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.1\\microsoft.extensions.primitives.5.0.1.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\system.io.pipelines\\5.0.1\\system.io.pipelines.5.0.1.nupkg.sha512"
+  ],
   "logs": []
 }
