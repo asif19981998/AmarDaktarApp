@@ -1,6 +1,6 @@
 .create-doctor {
-    margin-top: 5px;
-    width: 35%  !important;
+    /* margin-top: 5px; */
+    /* width: 35%  !important; */
 }
 .form{
     display: flex;
@@ -11,5 +11,9 @@
 }
 .submitButton{
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-end; 
+}
+
+.MuiFormControl-root{
+    width: 100%;
 }

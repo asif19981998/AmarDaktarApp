@@ -105,10 +105,14 @@ export default class Form extends Component{
    renderInputForImage(name,label,type="file"){
      const {data}=this.state
      return (
-       <input type={type} name={name} 
+       <input 
+       id="imageSrc"
+       type={type} 
+       name={name} 
        label={label} 
-      //  value={data[name]}
-        onChange={this.showPreview}/>
+      
+       onChange={this.showPreview}
+       />
      )
    }
 

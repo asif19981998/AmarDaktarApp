@@ -8,17 +8,21 @@ import FormControl from '@material-ui/core/FormControl';
 import FormLabel from '@material-ui/core/FormLabel';
 import InputLabel from '@material-ui/core/InputLabel';
 import Select from '@material-ui/core/Select';
+
 import axios from 'axios';
 import Joi from "joi-browser"
 import "./create-doctor.css"
-import Doctor from '../../classes/Doctor.jsx';
+import Doctor from '../../classes/Doctor.js';
 // import MaterialTextField from '../../utils/textfield';
 import Form from '../../common/form';
 import {deleteable} from './../../common/deleteable';
+import Card from '@material-ui/core/Card';
+import withToast from '../../common/addToast';
+const initialFieldValues = new Doctor();
 class CreateDoctor extends Form {
     
      state={
-            data:new Doctor(),
+            data:initialFieldValues,
             // errors:{}
         }
         
@@ -51,8 +55,13 @@ class CreateDoctor extends Form {
   //           deletedOn:Date()
         
   //     }
-    
   
+  resetForm =()=>{
+    document.getElementById('imageSrc').value = null;
+    this.setState({data:new Doctor()})
+  
+    
+  }
   doSubmit=()=>{
     console.log(" Before Api")
     const url = "https://localhost:5001/api/doctor"
@@ -91,10 +100,11 @@ class CreateDoctor extends Form {
         console.log(values)
         console.log(formData)
         axios.post(url,formData).then(result=>{
-          console.log(result)
+          this.props.addToast("Submitted successfully", { appearance: "success" });
+          this.resetForm()
         })
        
-        console.log(this.state.data)
+       
         
   }
 
@@ -105,63 +115,109 @@ render(){
     return (
       <div className="container">
         <div className="create-doctor ">
-        <h1>Create Doctor</h1>
-       <form onSubmit={this.handleSubmit}  noValidate autoComplete="off" className="form">
-  
-          {this.renderMaterialInput("name","Full Name")}
-          {this.renderMaterialInput("phoneNo","Phone No")}
-          {this.renderMaterialInput("email","Email")}
-          {this.renderMaterialInput("password","Password","password")}
-          {this.renderMaterialInput("bmdc","BMDC Number")}
-          {this.renderMaterialInput("degree","Degree")}
-          {this.renderMaterialInput("position","Position")}
-          {this.renderMaterialInput("yearsOfExperience","Years of Experience","number")}
-          {this.renderMaterialInput("fees","Fees","number")}
-          {this.renderInputForImage("imageSrc","DoctorImage")}
+          <Card style={{marginTop:8}}>
+            <div style={{padding:5}}>
+            <h2>Create Doctor</h2>
+         <form onSubmit={this.handleSubmit}  noValidate autoComplete="off" className="form">
+         
+          <div className="row">
+            <div className="col-md-6">
+              <div>
+              {this.renderMaterialInput("name","Full Name")}
+              </div>
+              <div>
+              {this.renderMaterialInput("phoneNo","Phone No")}
+                </div>
+              <div>
+              {this.renderMaterialInput("email","Email")}
+                </div>
+              <div>
+              {this.renderMaterialInput("password","Password","password")}
+                </div>
+              <div>
+              {this.renderMaterialInput("bmdc","BMDC Number")}
+                </div>
+              <div >
+              {this.renderMaterialInput("degree","Degree")}
+                </div>
+             
+         </div>
+                <div className="col-md-6">
+                <div>
+                {this.renderMaterialInput("position","Position")}
+                </div>
+              <div>
+              {this.renderMaterialInput("yearsOfExperience","Years of Experience","number")}
+                </div>
+              <div>
+              {this.renderMaterialInput("fees","Fees","number")}
+                </div>
+              <div>
+              {this.renderInputForImage("imageSrc","DoctorImage")}
+                </div>
+                <div  className="radio-area">
+            <FormLabel component="legend">Gender:</FormLabel>
+            <RadioGroup row aria-label="gender" name="gender" value={data.gender} onChange={this.handleChange} >
+                <FormControlLabel value="female" control={<Radio />} label="Female" />
+                <FormControlLabel value="male" control={<Radio />} label="Male" />
+                <FormControlLabel value="other" control={<Radio />} label="Other" />
+              
+          </RadioGroup>
+          </div>
+              <div>
+              <FormControl variant="outlined" >
+              <InputLabel htmlFor="department">Department</InputLabel>
+              <Select
+          native
+          label="Department"
+          inputProps={{
+            name: 'department',
+            id: 'department',
+          }}
+          value={data.department}
+          onChange={this.handleChange}
+        >
+          <option aria-label="None" value="" />
+          <option value={"cardiology"}>Cardiology</option>
+          <option value={"laser"}>Laser</option>
+          <option value={"medicine"}>Medicine</option>
+        </Select>
+          </FormControl>
+                </div>
+              <div>
+                </div>
+              <div>
+                </div>
+                
+         
 
-
-       <div  className="radio-area">
-       <FormLabel component="legend">Gender:</FormLabel>
-        <RadioGroup row aria-label="gender" name="gender" value={data.gender} onChange={this.handleChange} >
-            <FormControlLabel value="female" control={<Radio />} label="Female" />
-            <FormControlLabel value="male" control={<Radio />} label="Male" />
-            <FormControlLabel value="other" control={<Radio />} label="Other" />
-           
-       </RadioGroup>
-       </div>
-       <FormControl variant="outlined" >
-          <InputLabel htmlFor="department">Department</InputLabel>
-          <Select
-      native
-      label="Department"
-      inputProps={{
-        name: 'department',
-        id: 'department',
-      }}
-      value={data.department}
-      onChange={this.handleChange}
-    >
-      <option aria-label="None" value="" />
-      <option value={"cardiology"}>Cardiology</option>
-      <option value={"laser"}>Laser</option>
-      <option value={"medicine"}>Medicine</option>
-    </Select>
-       </FormControl>
+          
+         
+         
+                </div>
+          </div>
+          
+         
        {/* {this.renderInput("imageUrl","Doctor Image","file")}    */}
         
-  <div className="submitButton">
+           <div className="submitButton">
     {this.renderMaterialButton("Submit")}
    
-    </div>
-    </form>  
+            </div>
+            
+         </form>
+              </div>
+        
+          </Card>
+          
   
     </div>
      
         </div>
-       
+      
         )
 }
    
 }
 
-export default CreateDoctor
+export default withToast(CreateDoctor)

@@ -28,6 +28,8 @@ namespace AmarDaktar.IoCContainer
         {
             services.AddTransient<IDoctorService, DoctorService>();
             services.AddTransient<IDoctorRepository, DoctorRepository>();
+            services.AddTransient<IHospitalService, HospitalService>();
+            services.AddTransient<IHospitalRepository, HospitalRepository>();
             services.AddTransient<IUnitOfWork, UnitOfWork>();
             services.AddTransient<AmarDaktarDbContext>();
         }

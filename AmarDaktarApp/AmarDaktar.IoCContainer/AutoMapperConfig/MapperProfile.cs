@@ -15,6 +15,8 @@ namespace AmarDaktar.IoCContainer.AutoMapperConfig
         {
             CreateMap<DoctorCreateVM, Doctor>();
             CreateMap<Doctor, DoctorCreateVM>();
+            CreateMap<HospitalCreateVM, Hospital>();
+            CreateMap<Hospital, HospitalCreateVM>();
         }
     }
 }

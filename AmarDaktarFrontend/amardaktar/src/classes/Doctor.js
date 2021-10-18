@@ -10,7 +10,7 @@ export default class Doctor{
             department="";
             imageName="";
             imageSrc="";
-            imageFile=null;
+            imageFile="";
             degree="";
             specialList="";
             description="";

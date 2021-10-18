@@ -73,7 +73,7 @@ function Navbar() {
                 Doctor Blog
               </Link>
             </li>
-            <li className='nav-item'>
+            {/* <li className='nav-item'>
               <Link
                 to='/appointment'
                 className='nav-links'
@@ -81,7 +81,7 @@ function Navbar() {
               >
                 Appointment
               </Link>
-            </li>
+            </li> */}
            
             <li
               className='nav-item'

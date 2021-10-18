@@ -1,0 +1,46 @@
+.hospital-card{
+    margin-top: 7px;
+    box-shadow: -5px 7px 18px gray !important;
+   
+}
+/* .profile-pic{
+ width: 15%; 
+} */
+.profile-pic img{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+}
+.hospital-main{
+    display: flex;
+     padding: 15px;
+}
+.hospital-info{
+    padding-left: 27px;
+    width: 60%; 
+    font-size: 15px;
+    
+}
+.border-area{
+    height: 100%;
+    width: 2px;
+    color: gray;
+}
+.hospital-more-info{
+    /* width: 15%; */
+    font-size: 15px;
+    padding-left: 25px;
+}
+.appointment-button{
+    position: relative;
+}
+
+.hospital-card:hover .appointment-button{
+    background-color: red;
+}
+
+.pagination-area{
+    display: flex;
+    justify-content: center;
+    margin-top: 6px;
+}
