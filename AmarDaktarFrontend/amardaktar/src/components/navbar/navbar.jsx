@@ -1,14 +1,53 @@
 import React from 'react'
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import "./navbar.css"
 import Dropdown from './dropdown';
 import Button from './button';
 
-function Navbar() {
+function Navbar(props) {
+  const logout=async(e)=>{
+        
+    await fetch("http://localhost:5001/api/logout",{
+       method:'POST',
+       headers:{'Content-Type':'application/json'},
+       credentials:"include",
+       
+   });
+   props.setName('')
+}
+let menu ;
+   
+    if(props.name ==='' || props.name===undefined){
+       
+         menu = (
+            <ul className="navbar-nav me-auto mb-2 mb-md-0"> 
+         <li className="nav-item active">
+            <Link to="/login" className="nav-link" >Login</Link>
+          </li>
+          {/* <li class="nav-item active">
+            <Link to="/signUp" className="nav-link" >Register</Link>
+          </li> */}
+          </ul>
+             
+        )
+
+    }
+    else {
+        console.log("hi from 2")
+        menu = (
+            <ul className="navbar-nav me-auto mb-2 mb-md-0"> 
+         <li className="nav-item active">
+            <Link to="/login" className="nav-link" onClick={logout}>Logout</Link>
+          </li>
+         
+          </ul>
+             
+        )
+    }
   const [click, setClick] = useState(false);
   const [dropdown, setDropdown] = useState(false);
-
+  
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
   const onMouseEnter = () => {
@@ -18,6 +57,11 @@ function Navbar() {
       setDropdown(true);
     }
   };
+
+  useEffect(() => {
+    
+   
+  }, [props.name])
 
   const onMouseLeave = () => {
     if (window.innerWidth < 960) {
@@ -30,7 +74,7 @@ function Navbar() {
         <>
         <nav className='navbar'>
           <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-            EPIC
+            GWS
             <i class='fab fa-firstdraft' />
           </Link>
           <div className='menu-icon' onClick={handleClick}>
@@ -64,14 +108,18 @@ function Navbar() {
               </Link>
             </li>
             
-            <li className='nav-item'>
+            <li className='nav-item'
+            onMouseEnter={onMouseEnter}
+            onMouseLeave={onMouseLeave}>
               <Link
-                to='/doctorBlog'
+                to='/registration'
                 className='nav-links'
+                
                 onClick={closeMobileMenu}
               >
-                Doctor Blog
+                Registration 
               </Link>
+              {dropdown && <Dropdown/>}
             </li>
             {/* <li className='nav-item'>
               <Link
@@ -82,25 +130,25 @@ function Navbar() {
                 Appointment
               </Link>
             </li> */}
-           
+            <li style={{color:"#fff",marginTop:"27px"}}>{props.name}</li>
             <li
               className='nav-item'
-              onMouseEnter={onMouseEnter}
-              onMouseLeave={onMouseLeave}
+              
             >
-              <Link
-                to='/registration'
+              {menu}
+              {/* <Link
+                to='/login'
                 className='nav-links'
                 onClick={closeMobileMenu}
               >
-                Registration 
-                {/* <i className='fas fa-caret-down' /> */}
+                Login
+                {/* <i className='fas fa-caret-down' /> 
                 
-              </Link>
-              {dropdown && <Dropdown/>}
+              </Link> */}
+             
               
             </li>
-        
+           
             <li>
               <Link
                 to='/sign-up'
@@ -110,8 +158,9 @@ function Navbar() {
                 Sign Up
               </Link>
             </li>
+           
           </ul>
-          <Button/>
+         
         </nav>
        
       </>

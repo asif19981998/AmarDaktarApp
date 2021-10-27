@@ -5,7 +5,7 @@ import { paginate } from '../../utils/paginate';
 import Pagination from "../../common/HOC/pagination";
 import axios from 'axios';
 import getDoctor from "./doctorService"
-
+import {apiUrl} from "../../configs/config.json"
       
 function DoctorDetials() {
         const [doctorList,setDoctorList] = useState([]);
@@ -34,7 +34,7 @@ function DoctorDetials() {
           },[currentPage])
 
           function refreshDoctorList() {
-            const url = "https://localhost:5001/api/doctor"
+            const url = apiUrl + "doctor"
               var data=[];
               axios.get(url).then(result=>{
                   console.log(result.data)

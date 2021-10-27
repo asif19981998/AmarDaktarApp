@@ -10,6 +10,8 @@ using AmarDaktar.Repositories.Abastractions.IEntity;
 using AmarDaktar.Repositories.Abastractions.IUnitWork;
 using AmarDaktar.Repositories.EntityRepo;
 using AmarDaktar.Repositories.UnitOfWork;
+using Login_and_Log_out.Data;
+using Login_and_Log_out.Helpers;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -30,8 +32,11 @@ namespace AmarDaktar.IoCContainer
             services.AddTransient<IDoctorRepository, DoctorRepository>();
             services.AddTransient<IHospitalService, HospitalService>();
             services.AddTransient<IHospitalRepository, HospitalRepository>();
+            services.AddTransient<IUserRepository, UserRepository>();
+
             services.AddTransient<IUnitOfWork, UnitOfWork>();
             services.AddTransient<AmarDaktarDbContext>();
+            services.AddScoped<JwtService>();
         }
     }
 }

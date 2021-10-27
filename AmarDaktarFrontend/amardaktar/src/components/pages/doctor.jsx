@@ -1,14 +1,11 @@
 import React from 'react'
-import CreateDoctor from '../create-doctor/create-doctor'
-
+import DoctorDetials from '../doctor-details/doctordetails'
+import AllDoctorList from './allDoctorList'
 
 function Doctor() {
     return (
         <div>
-            
-
-            <CreateDoctor/>
-           
+            <AllDoctorList/> 
         </div>
     )
 }

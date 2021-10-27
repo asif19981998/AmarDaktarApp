@@ -73,8 +73,9 @@ namespace AmarDaktarApp
             app.UseRouting();
             app.UseCors(options =>
             {
+
                 options.WithOrigins(new[] { "http://localhost:3000" });
-                options.AllowAnyHeader();
+                options.AllowAnyMethod();
                 options.AllowAnyHeader();
                 options.AllowCredentials();
             });
@@ -83,7 +84,7 @@ namespace AmarDaktarApp
                 FileProvider = new PhysicalFileProvider(Path.Combine(env.ContentRootPath, "Images")),
                 RequestPath = "/Images"
             });
-            app.UseAuthorization();
+            app.UseAuthentication();
 
             app.UseEndpoints(endpoints =>
             {

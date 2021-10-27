@@ -40,7 +40,7 @@ namespace AmarDaktarApp.Controllers
         [HttpGet]
         public  ActionResult<IEnumerable<Doctor>> GetDoctor()
         {
-            var data =  _service.GetAll()
+            var data =  _service.GetApprovedData()
                 .Select(x => new Doctor()
                 {
                     Id = x.Id,
@@ -69,6 +69,41 @@ namespace AmarDaktarApp.Controllers
             return data;
         }
 
+        [HttpGet]
+        [Route("GetAllDoctor")]
+        public ActionResult<IEnumerable<Doctor>> GetAllDoctor()
+        {
+            var data = _service.GetAll()
+                .Select(x => new Doctor()
+                {
+                    Id = x.Id,
+                    Name = x.Name,
+                    ImageName = x.ImageName,
+                    Degree = x.Degree,
+                    Specialist = x.Specialist,
+                    Description = x.Description,
+                    YearsOfExperience = x.YearsOfExperience,
+                    BMDC = x.BMDC,
+                    Fees = x.Fees,
+                    PhoneNo = x.PhoneNo,
+                    Password = x.Password,
+                    Gender = x.Gender,
+                    Department = x.Department,
+                    Email = x.Email,
+                    MeetUrl = x.MeetUrl,
+                    FacebookUrl = x.FacebookUrl,
+                    TwitterUrl = x.TwitterUrl,
+                    LinkinUrl = x.LinkinUrl,
+                    IsDeleted = x.IsDeleted,
+                    Position = x.Position,
+                    IsApproved = x.IsApproved,
+                    ImageSrc = String.Format("{0}://{1}{2}/Images/{3}", Request.Scheme, Request.Host, Request.PathBase, x.ImageName)
+                }).ToList();
+
+            return data;
+        }
+
+
         // GET api/<DoctorController>/5
         [HttpGet("{id}")]
         public string Get(int id)
@@ -89,9 +124,19 @@ namespace AmarDaktarApp.Controllers
         }
 
         // PUT api/<DoctorController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+       [HttpPut]
+       [Route("Update")]
+       public async Task<IActionResult> Update(Doctor doctor)
         {
+            try
+            {
+                var result = await _service.UpdateAsync(doctor);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return Ok(ex);
+            }
         }
 
         // DELETE api/<DoctorController>/5

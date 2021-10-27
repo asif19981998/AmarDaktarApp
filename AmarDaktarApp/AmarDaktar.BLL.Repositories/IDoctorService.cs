@@ -11,5 +11,8 @@ namespace AmarDaktar.BLL.Contracts
 {
     public interface IDoctorService:IMainService<Doctor>
     {
+ IEnumerable<Doctor> GetApprovedData();
+IEnumerable<Doctor> GetNotApprovedData();
+
     }
 }

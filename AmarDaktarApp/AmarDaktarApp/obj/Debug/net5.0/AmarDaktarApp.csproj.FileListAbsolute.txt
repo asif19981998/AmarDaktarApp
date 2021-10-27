@@ -86,3 +86,5 @@ E:\AmarDaktar\AmarDaktarApp\AmarDaktarApp\bin\Debug\net5.0\AutoMapper.Extensions
 E:\AmarDaktar\AmarDaktarApp\AmarDaktarApp\bin\Debug\net5.0\Microsoft.AspNetCore.Http.Features.dll
 E:\AmarDaktar\AmarDaktarApp\AmarDaktarApp\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
 E:\AmarDaktar\AmarDaktarApp\AmarDaktarApp\bin\Debug\net5.0\System.IO.Pipelines.dll
+E:\AmarDaktar\AmarDaktarApp\AmarDaktarApp\bin\Debug\net5.0\BCrypt.Net-Next.dll
+E:\AmarDaktar\AmarDaktarApp\AmarDaktarApp\bin\Debug\net5.0\BouncyCastle.Crypto.dll

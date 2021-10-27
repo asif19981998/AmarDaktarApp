@@ -18,6 +18,7 @@ import Form from '../../common/form';
 import {deleteable} from './../../common/deleteable';
 import Card from '@material-ui/core/Card';
 import withToast from '../../common/addToast';
+import {apiUrl} from "../../configs/config.json";
 const initialFieldValues = new Doctor();
 class CreateDoctor extends Form {
     
@@ -64,7 +65,7 @@ class CreateDoctor extends Form {
   }
   doSubmit=()=>{
     console.log(" Before Api")
-    const url = "https://localhost:5001/api/doctor"
+    const url = apiUrl + "doctor"
         // server call
         console.log(this.state.data)
         const formData = new FormData();

@@ -1,6 +1,7 @@
 ﻿using AmarDaktar.Models.EntityModels;
 using AmarDaktar.Models.ViewModel.Doctor;
 using AutoMapper;
+using Login_and_Log_out.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,6 +18,7 @@ namespace AmarDaktar.IoCContainer.AutoMapperConfig
             CreateMap<Doctor, DoctorCreateVM>();
             CreateMap<HospitalCreateVM, Hospital>();
             CreateMap<Hospital, HospitalCreateVM>();
+            
         }
     }
 }

@@ -18,9 +18,10 @@ import Form from '../../common/form';
 import {deleteable} from './../../common/deleteable';
 import Card from '@material-ui/core/Card';
 import withToast from '../../common/addToast';
+import {apiUrl} from "../../configs/config.json";
 const initialFieldValues = new Hospital();
 class CreateHospital extends Form {
-    
+     
      state={
             data:initialFieldValues,
             // errors:{}
@@ -64,7 +65,7 @@ class CreateHospital extends Form {
   }
   doSubmit=()=>{
     console.log(" Before Api")
-    const url = "https://localhost:5001/api/hospital"
+   
         // server call
         console.log(this.state.data)
         const formData = new FormData();
@@ -86,7 +87,7 @@ class CreateHospital extends Form {
         formData.append("deletedOn",values.deletedOn);
      
        
-       
+        const url = apiUrl + "hospital";
         console.log(values)
         console.log(formData)
         axios.post(url,formData).then(result=>{

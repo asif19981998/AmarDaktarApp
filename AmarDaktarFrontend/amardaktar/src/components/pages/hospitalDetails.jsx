@@ -4,7 +4,7 @@ import Card from '@material-ui/core/Card';
 import { paginate } from '../../utils/paginate';
 import Pagination from "../../common/HOC/pagination";
 import axios from 'axios';
-
+import {apiUrl} from "../../configs/config.json";
 
       
 function HospitalDetials() {
@@ -34,9 +34,9 @@ function HospitalDetials() {
           },[currentPage])
 
           function refreshHospitalList() {
-            const url = "https://localhost:5001/api/hospital"
-              var data=[];
-              axios.get(url).then(result=>{
+            const url = apiUrl + "hospital";
+            var data=[];
+            axios.get(url).then(result=>{
                   console.log(result.data)
                 setTotalCount(result.data.length)
                 setHospitalList(paginate(result.data,currentPage,size));

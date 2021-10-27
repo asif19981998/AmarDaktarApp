@@ -40,6 +40,7 @@ namespace AmarDaktar.Models.EntityModels
 
         public long? DeletedById { get ; set; }
         public DateTime? DeletedOn { get; set; }
+        public bool IsApproved { get; set; }
         
        
     }

@@ -1,9 +1,9 @@
 import React from 'react'
-
+import CreateDoctor from '../create-doctor/create-doctor'
 function DoctorRegistration() {
     return (
         <div>
-            Doctor Registration
+             <CreateDoctor/>
         </div>
     )
 }
