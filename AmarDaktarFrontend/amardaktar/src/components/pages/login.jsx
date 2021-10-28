@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
 import { Redirect,Link } from 'react-router-dom';
+import { useToasts } from "react-toast-notifications";
 import "./login.css"
 function Login(props) {
     const [email, setemail] = useState("")
     const [password, setpassword] = useState("")
     const [redirect,setredirect] = useState(false)
+    const { addToast } = useToasts();
     const submit=async (e)=>{
         e.preventDefault()
         console.log("click submit button")
@@ -18,9 +20,15 @@ function Login(props) {
             })
         });
         const content = await response.json();
-        console.log(content)
-        console.log(content.name)
-        setredirect(true);
+       
+        console.log(response)
+        if(content.name){
+            setredirect(true);
+        }
+        if(!content.name){
+            addToast("Invaild Credential", { appearance: "error" });
+        }
+        
         props.setName(content.name) 
        
     }

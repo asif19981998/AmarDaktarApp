@@ -10,5 +10,7 @@ namespace AmarDaktar.BLL.Contracts
 {
     public interface IHospitalService:IMainService<Hospital>
     {
+        IEnumerable<Hospital> GetApprovedData();
+        IEnumerable<Hospital> GetNotApprovedData();
     }
 }

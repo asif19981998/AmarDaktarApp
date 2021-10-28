@@ -25,9 +25,7 @@ let menu ;
          <li className="nav-item active">
             <Link to="/login" className="nav-link" >Login</Link>
           </li>
-          {/* <li class="nav-item active">
-            <Link to="/signUp" className="nav-link" >Register</Link>
-          </li> */}
+         
           </ul>
              
         )
@@ -45,6 +43,35 @@ let menu ;
              
         )
     }
+//     let menuForDoctorList ;
+//     if(props.name ==='superadmin' ){
+       
+//       menuForDoctorList = (
+//          <ul className="navbar-nav me-auto mb-2 mb-md-0"> 
+//       <li className="nav-item active">
+//          <Link to="/allDoctorList" className="nav-link" >Login</Link>
+//        </li>
+      
+//        </ul>
+          
+//      )
+
+//  }
+//  else {
+//      console.log("hi from 2")
+//      menuForDoctorList = (
+//          <ul className="navbar-nav me-auto mb-2 mb-md-0"> 
+//       <li className="nav-item active">
+//          <Link to="/doctorDetails" className="nav-link" onClick={logout}>Logout</Link>
+//        </li>
+      
+//        </ul>
+          
+//      )
+//  }
+
+
+
   const [click, setClick] = useState(false);
   const [dropdown, setDropdown] = useState(false);
   
@@ -90,22 +117,32 @@ let menu ;
          
         
              <li className='nav-item'>
-              <Link
+              {/* <Link
                 to='/doctor'
                 className='nav-links'
                 onClick={closeMobileMenu}
               >
                 Doctor
-              </Link>
+              </Link> */}
+              {/* {menuForDoctorList} */}
+           {
+              props.name ==='superadmin' &&  
+              <Link 
+              to="/allDoctorList" 
+              className="nav-links" >Doctor List</Link>}
+              {props.name !='superadmin' &&  
+              <Link to="/doctorDetails" className="nav-links" >Doctor</Link>}
             </li>
             <li className='nav-item'>
-              <Link
+              {/* <Link
                 to='/hospital'
                 className='nav-links'
                 onClick={closeMobileMenu}
               >
                 Hospital
-              </Link>
+              </Link> */}
+               {props.name ==='superadmin' &&  <Link to="/allHospitalList" className="nav-links" >Hospital List</Link>}
+              {props.name !='superadmin' &&  <Link to="/HospitalDetails" className="nav-links" >Hospital</Link>}
             </li>
             
             <li className='nav-item'
@@ -130,7 +167,12 @@ let menu ;
                 Appointment
               </Link>
             </li> */}
-            <li style={{color:"#fff",marginTop:"27px"}}>{props.name}</li>
+            {props.name &&
+            <div style={{height:"56px",borderRadius:"55%",width:"268px",marginTop:"13px"}}>
+            <div style={{color:"#fff",marginTop:"10px",padding:"3px"}}>{props.name}</div>
+            </div>
+            
+            }
             <li
               className='nav-item'
               

@@ -19,5 +19,13 @@ namespace AmarDaktar.BLL
             _repository = iRepository;
 
         }
+        public IEnumerable<Hospital> GetApprovedData()
+        {
+            return _repository.GetApprovedData();
+        }
+        public IEnumerable<Hospital> GetNotApprovedData()
+        {
+            return _repository.GetNotApprovedData();
+        }
     }
 }

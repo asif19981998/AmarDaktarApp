@@ -37,6 +37,28 @@ namespace AmarDaktarApp.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<Hospital>> GetHospital()
         {
+            var data = _service.GetApprovedData()
+                .Select(x => new Hospital()
+                {
+                    Id = x.Id,
+                    Name = x.Name,
+                    ImageName = x.ImageName,
+                    ImageFile = x.ImageFile,
+                    Address = x.Address,
+                    Email = x.Email,
+                    AboutUs = x.AboutUs,
+                    WebsiteUrl = x.WebsiteUrl,
+                    ImageSrc = String.Format("{0}://{1}{2}/Images/{3}", Request.Scheme, Request.Host, Request.PathBase, x.ImageName)
+                }).ToList();
+
+            return data;
+        }
+
+
+        [HttpGet]
+        [Route("GetAllHospital")]
+        public ActionResult<IEnumerable<Hospital>> GetAllHospital()
+        {
             var data = _service.GetAll()
                 .Select(x => new Hospital()
                 {
@@ -48,6 +70,7 @@ namespace AmarDaktarApp.Controllers
                     Email = x.Email,
                     AboutUs = x.AboutUs,
                     WebsiteUrl = x.WebsiteUrl,
+                    IsApproved = x.IsApproved,
                     ImageSrc = String.Format("{0}://{1}{2}/Images/{3}", Request.Scheme, Request.Host, Request.PathBase, x.ImageName)
                 }).ToList();
 
@@ -73,11 +96,21 @@ namespace AmarDaktarApp.Controllers
             return Ok("Not Saved");
         }
 
-        // PUT api/<HospitalController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        [HttpPut]
+        [Route("Update")]
+        public async Task<IActionResult> Update(Hospital hospital)
         {
+            try
+            {
+                var result = await _service.UpdateAsync(hospital);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return Ok(ex);
+            }
         }
+
 
         // DELETE api/<HospitalController>/5
         [HttpDelete("{id}")]

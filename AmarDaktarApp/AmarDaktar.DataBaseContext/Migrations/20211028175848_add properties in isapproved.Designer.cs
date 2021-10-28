@@ -4,14 +4,16 @@ using AmarDaktar.DataBaseContext;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace AmarDaktar.DataBaseContext.Migrations
 {
     [DbContext(typeof(AmarDaktarDbContext))]
-    partial class AmarDaktarDbContextModelSnapshot : ModelSnapshot
+    [Migration("20211028175848_add properties in isapproved")]
+    partial class addpropertiesinisapproved
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

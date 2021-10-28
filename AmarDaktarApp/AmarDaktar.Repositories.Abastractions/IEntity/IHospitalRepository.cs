@@ -10,5 +10,7 @@ namespace AmarDaktar.Repositories.Abastractions.IEntity
 {
     public interface IHospitalRepository:IMainRepository<Hospital>
     {
+        IEnumerable<Hospital> GetApprovedData();
+        IEnumerable<Hospital> GetNotApprovedData();
     }
 }

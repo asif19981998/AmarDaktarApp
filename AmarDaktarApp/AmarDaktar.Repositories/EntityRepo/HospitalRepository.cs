@@ -17,5 +17,16 @@ namespace AmarDaktar.Repositories.EntityRepo
         {
             _db = db;
         }
+
+        public IEnumerable<Hospital> GetApprovedData()
+        {
+            return _db.Hospitals.ToList().Where(d => d.IsApproved == true);
+
+        }
+        public IEnumerable<Hospital> GetNotApprovedData()
+        {
+            return _db.Hospitals.ToList().Where(d => d.IsApproved == false); ;
+
+        }
     }
 }

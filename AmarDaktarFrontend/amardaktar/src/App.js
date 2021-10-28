@@ -17,8 +17,8 @@ import { ToastProvider } from "react-toast-notifications";
 import HospitalDetails from './components/pages/hospitalDetails';
 import HospitalRegistration from './components/pages/hospitalRegistration';
 import AllDoctorList from './components/pages/allDoctorList';
-
-
+import DoctorDetials from './components/doctor-details/doctordetails';
+import AllHospitalList from './components/pages/allHospitalList';
 
 function App() {
   const [name,setname]= useState('')
@@ -56,6 +56,9 @@ function App() {
             <Route path="/signUp" component={Register}/>
             <Route path="/login" component={()=><Login setName={setname}/>}></Route>
             <Route path="/allDoctorList" component={AllDoctorList}></Route>
+            <Route path="/doctorDetails" component={DoctorDetials}></Route>
+            <Route path="/allHospitalList" component={AllHospitalList}></Route>
+            <Route path="/hospitalDetails" component={HospitalDetails}></Route>
             {/* <Route path=""   component={Home}/> */}
           </Switch>
           </ToastProvider>

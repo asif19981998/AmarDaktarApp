@@ -27,7 +27,7 @@ function AllDoctorList() {
           
         }
 
-      const handleApproved=(doctor)=>{
+       const handleApproved=(doctor)=>{
           doctor.isApproved = true;
           console.log(doctor)
           const url = apiUrl + "doctor/Update"
