@@ -169,7 +169,7 @@ let menu ;
             </li> */}
             {props.name &&
             <div style={{height:"56px",borderRadius:"55%",width:"268px",marginTop:"13px"}}>
-            <div style={{color:"#fff",marginTop:"10px",padding:"3px"}}>{props.name}</div>
+            <div style={{color:"#fff",marginTop:"10px",padding:"3px",color:"red"}}>{props.name}</div>
             </div>
             
             }
