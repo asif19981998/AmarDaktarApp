@@ -54,7 +54,12 @@ function HospitalDetials() {
         <Card className="hospital-card" key={hospital.id}>
         <div className="hospital-main">
             <section className="profile-pic">
-                <img src={hospital.imageSrc} alt="hospital"></img>
+                {/* <img src={hospital.imageSrc} alt="hospital"></img> */}
+                {/* <iframe src={hospital.imageSrc}></iframe> */}
+                <a href={hospital.imageSrc} target="_blank">
+                     Download file
+                 </a>
+                jhhj
             </section>
             <section className="hospital-info">
                 <h5 className="name">{hospital.name}</h5>

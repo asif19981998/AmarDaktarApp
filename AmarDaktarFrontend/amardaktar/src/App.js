@@ -19,6 +19,7 @@ import HospitalRegistration from './components/pages/hospitalRegistration';
 import AllDoctorList from './components/pages/allDoctorList';
 import DoctorDetials from './components/doctor-details/doctordetails';
 import AllHospitalList from './components/pages/allHospitalList';
+import DoctorAppoinement from './components/pages/doctorAppointment';
 
 function App() {
   const [name,setname]= useState('')
@@ -59,6 +60,7 @@ function App() {
             <Route path="/doctorDetails" component={DoctorDetials}></Route>
             <Route path="/allHospitalList" component={AllHospitalList}></Route>
             <Route path="/hospitalDetails" component={HospitalDetails}></Route>
+            <Route path="/doctorAppointment" component={DoctorAppoinement}></Route>
             {/* <Route path=""   component={Home}/> */}
           </Switch>
           </ToastProvider>

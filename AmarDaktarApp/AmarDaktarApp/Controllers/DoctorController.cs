@@ -11,6 +11,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net.Mime;
 using System.Threading.Tasks;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -38,7 +39,9 @@ namespace AmarDaktarApp.Controllers
         //    return _service.GetAll();
         //}
         [HttpGet]
-        public  ActionResult<IEnumerable<Doctor>> GetDoctor()
+        [ProducesResponseType(StatusCodes.Status200OK,Type=typeof(Doctor))]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public  IActionResult GetDoctor()
         {
             var data =  _service.GetApprovedData()
                 .Select(x => new Doctor()
@@ -66,7 +69,7 @@ namespace AmarDaktarApp.Controllers
                     ImageSrc = String.Format("{0}://{1}{2}/Images/{3}", Request.Scheme, Request.Host, Request.PathBase, x.ImageName)
                 }).ToList();
 
-            return data;
+            return Ok(data);
         }
 
         [HttpGet]
@@ -113,6 +116,7 @@ namespace AmarDaktarApp.Controllers
 
         // POST api/<DoctorController>
         [HttpPost]
+        [Consumes(MediaTypeNames.Application.Json)]
         public async Task<ActionResult<Doctor>> Post([FromForm] DoctorCreateVM doctorModel)
         {
           var doctor = _mapper.Map<Doctor>(doctorModel);

@@ -6,6 +6,7 @@ import Pagination from "../../common/HOC/pagination";
 import axios from 'axios';
 import getDoctor from "./doctorService"
 import {apiUrl} from "../../configs/config.json"
+import { Link } from 'react-router-dom';
       
 function DoctorDetials() {
         const [doctorList,setDoctorList] = useState([]);
@@ -67,7 +68,9 @@ function DoctorDetials() {
                   <h6>BMDC: {doctor.bmdc}</h6>
                   <h6>Fees: {doctor.fees}</h6>
                   <p>Contact Symbol</p>
-                  <button className="appointment-button">Book Appointment </button>
+                  
+                  
+                  {/* <Link to="/doctorAppointment" ><button className="appointment-button">Doctor Details</button></Link> */}
             </section>
           
         </div>
